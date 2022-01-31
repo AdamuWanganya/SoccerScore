@@ -16,4 +16,16 @@ public class LeaguesArrayAdapter extends ArrayAdapter {
         this.mLeagues = mLeagues;
         this.mliveScore= mliveScore;
     }
+
+    @Override
+    public Object getItem(int position) {
+        String league = mLeagues[position];
+        String liveScore = mliveScore[position];
+        return String.format("%s \nLivescores : %s",league,liveScore);
+    }
+
+    @Override
+    public int getCount() {
+        return mLeagues.length;
+    }
 }
