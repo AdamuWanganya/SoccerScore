@@ -19,9 +19,11 @@ public class Leagues extends AppCompatActivity {
     @BindView(R.id.listView1) ListView mlistView1;
     @BindView(R.id.leagueTextView) TextView mleagueTextView;
 
-    private     String[] leagues = new String[] {"Liverpool vs Chelsea", "Tottenhum vs Newcastle","Egypt vs Senegal",
-            "morocco vs Cameroon", "Gambia vs Bukina Faso", "Algeria vs Kenya", "Kenya vs Uganda", "Uganda vs Tanzania", "Mozambique vs Malawi" , "Liverpool vs Manu", "Mancity vs Wolvs",
-            "South Africa Vs Ghana", "Australia vs Garbon","Moroco vs malawi","Somalia vs Congo", "Congo vs malawi"  };
+    private     String[] leagues = new String[] {"Liverpool vs Chelsea", "Tottenhum vs Newcastle","Egypt vs Senegal","morocco vs Cameroon",
+            "Gambia vs Bukina Faso", "Algeria vs Kenya", "Kenya vs Uganda", "Uganda vs Tanzania", "Mozambique vs Malawi" , "Liverpool vs Manu",
+            "Mancity vs Wolvs", "South Africa Vs Ghana", "Australia vs Garbon","Moroco vs malawi","Somalia vs Congo", "Congo vs malawi"  };
+
+    private String[] liveScore = new String[] {"1:1", "1:0","0:0","2:0","8:3","2:3","3:0","0:3","0:0","4:2","2:0","0:0","2:1","3:1","0:0","0:0"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
