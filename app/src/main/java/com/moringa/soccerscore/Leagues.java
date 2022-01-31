@@ -12,9 +12,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class Leagues extends AppCompatActivity {
-    private TextView mleagueTextView;
-    private ListView mlistView1;
+    @BindView(R.id.listView1) ListView mlistView1;
+    @BindView(R.id.leagueTextView) TextView mleagueTextView;
+
     private     String[] leagues = new String[] {"Liverpool vs Chelsea", "Tottenhum vs Newcastle","Egypt vs Senegal",
             "morocco vs Cameroon", "Gambia vs Bukina Faso", "Algeria vs Kenya", "Kenya vs Uganda", "Uganda vs Tanzania", "Mozambique vs Malawi" , "Liverpool vs Manu", "Mancity vs Wolvs",
             "South Africa Vs Ghana", "Australia vs Garbon","Moroco vs malawi","Somalia vs Congo", "Congo vs malawi"  };
@@ -23,9 +27,7 @@ public class Leagues extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leagues);
-
-        mlistView1 = (ListView) findViewById(R.id.listView1);
-        mleagueTextView = (TextView)findViewById(R.id.leagueTextView);
+        ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, leagues);
         mlistView1.setAdapter(adapter);
