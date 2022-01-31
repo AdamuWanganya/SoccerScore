@@ -31,7 +31,7 @@ public class Leagues extends AppCompatActivity {
         setContentView(R.layout.activity_leagues);
         ButterKnife.bind(this);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, leagues);
+        LeaguesArrayAdapter adapter = new LeaguesArrayAdapter(this, android.R.layout.simple_list_item_1, leagues,liveScore);
         mlistView1.setAdapter(adapter);
 
         mlistView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {

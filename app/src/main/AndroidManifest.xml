@@ -10,10 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SoccerScore">
         <activity
-            android:name=".Leagues"
-            android:exported="true" />
+            android:name=".Leagues"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.moringa.soccerscore.MainActivity">
+        </meta-data>
+            android:exported="true"
+        android:label="@string/title_activity_leagues"
+        android:theme="@style/Theme.Leagues.NoActionBar"/>
         <activity
             android:name=".MainActivity"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
