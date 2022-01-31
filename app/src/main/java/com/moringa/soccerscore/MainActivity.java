@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TAG = MainActivity.class.getSimpleName();
+
     private Button mbtnFindLeague;
     private EditText meditTxtType;
 
@@ -26,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String league = mbtnFindLeague.getText().toString();
-
                 Intent intent = new Intent(MainActivity.this,Leagues.class);
+
+                intent.putExtra("league",league);
                 startActivity(intent);
+
             }
         });
     }
