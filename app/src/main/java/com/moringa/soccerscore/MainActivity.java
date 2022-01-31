@@ -7,20 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    private Button mbtnFindLeague;
-    private EditText meditTxtType;
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.btnFindLeague) Button mbtnFindLeague;
+    @BindView(R.id.editTxtType) EditText meditTxtType;
+    @BindView(R.id.appName)  TextView mappName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mbtnFindLeague = (Button) findViewById(R.id.btnFindLeague);
-        meditTxtType = (EditText) findViewById(R.id.editTxtType);
+        ButterKnife.bind(this);
 
         mbtnFindLeague.setOnClickListener(new View.OnClickListener() {
             @Override
