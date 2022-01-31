@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         mbtnFindLeague.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String league = mbtnFindLeague.getText().toString();
+                String league = meditTxtType.getText().toString();
                 Intent intent = new Intent(MainActivity.this,Leagues.class);
 
                 intent.putExtra("league",league);
